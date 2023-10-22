@@ -1,6 +1,5 @@
 #include<iostream>
 #include<cassert>
-using namespace std;
 
 struct HanoiRecord {
     int _numberDisks;
@@ -18,22 +17,27 @@ HanoiRecord(int numberDisks, int sourcePole, int sparePole, int destinationPole)
 
 class stack {
     private:
-        struct HanoiRecordLink {
+    struct HanoiRecordLink {
         HanoiRecord value;
         HanoiRecordLink * next;
     };
         HanoiRecordLink * _top;
     public:
-        stack() { /* missing code */ }
-        void push( HanoiRecord );
+        stack() {
+            _top = nullptr;
+        }
+        void push(HanoiRecord record);
         HanoiRecord pop();
         HanoiRecord top() {
  /* missing code */
         }
-        bool is_empty() { /* missing code */ }
+        bool is_empty(){
+            return _top == nullptr;
+
+        }
  };
 
- void stack::push( /* missing code */ ) {
+ void stack::push(HanoiRecord record) {
  /* missing code */
     }
  HanoiRecord stack::pop() {
@@ -45,9 +49,9 @@ int main() {
     int numberOfDisks = 0;
     HanoiRecord tRecord;
     stack HanoiStack;
-    cout << "How many disks? " << flush;
-    cin >> numberOfDisks;
+    std::cout << "How many disks? " << std::flush;
+    std::cin >> numberOfDisks;
     
-    HanoiStack.push( /* missing code */ );
+    HanoiStack.push(HanoiRecord(numberOfDisks, 1, 2, 3));
  /* missing code */
  }

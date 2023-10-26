@@ -47,6 +47,7 @@ private:
  void stack::push(HanoiRecord record) {
  /* missing code */
     }
+    
  HanoiRecord stack::pop() {
  
 /* missing code */

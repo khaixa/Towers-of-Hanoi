@@ -62,7 +62,7 @@ bool stack::is_empty(){
 }
 
 void moveDisk(int sourcePole, int destinationPole){
-    std::cout << "Move disk from pole " << sourcePole << " to pole " << destinationPole << std::endl;
+    std::cout << "Disk moved from pole " << sourcePole << " to pole " << destinationPole << std::endl;
 }
 
 void hanoiIterative(int n){
@@ -87,7 +87,7 @@ int main() {
     int numberOfDisks;
     HanoiRecord tRecord;
     stack HanoiStack;
-    std::cout << "How many disks?: " << std::flush;
+    std::cout << "Please enter the number of disks: " << std::flush;
     std::cin >> numberOfDisks;
     
     hanoiIterative(numberOfDisks);
